@@ -46,9 +46,9 @@ management:
       show-components: always # list all checks within each group: health, readiness, liveness
       group:
         readiness:
-          include: readinessState,diskSpace,db,port # external checks to indicate Kubernetes if application is ready for traffic
+          include: readinessState,diskSpace # external checks to indicate Kubernetes if application is ready for traffic
         liveness:
-          include: livenessState,port # internal checks to indicate Kubernetes if application requires a reboot
+          include: livenessState # internal checks to indicate Kubernetes if application requires a reboot
   export:
     prometheus:
       enabled: true
